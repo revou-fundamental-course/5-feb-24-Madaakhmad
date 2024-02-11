@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "try html",
+			"path": "../../try html"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "index.html course"
+	}
+}
