@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konversi Suhu</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <title>Konversi suhu</title>
+    <li rel="s"></li>
 </head>
+
 <body>
-    <main id="mainElement">
-        <div class="calculator-container">
-            <div class="input-container">
-                <label for="input"><span id="input-text-temp">Celcius</span> (&deg;<span id="input-logo-temp">C</span>)</label>
-                <input type="number" class="form-control" id="input">
+    <h1>Konversi Suhu</h1>
+    <p>Masukkan suhu (°C) ke kotak yang ada dibawah ini, lalu klik tombol "Convert" untuk mengetahui hasil konversi</p>
+    <br>
+    <div class="container">
+        <div class="card col-sm-8">
+            <!-- Block celcius -->
+            <div class="card-header">
+                <h4>Celcius >> Fahrenheit</h4>
             </div>
-            <div class="button-container">
-                <button type="button" id="convert" class="btn btn-primary btn-md btn-block">Convert</button>
-                <button type="button" id="reset" class="btn btn-warning btn-md btn-block">Reset</button>
-                <button type="button" id="change" class="btn btn-danger btn-md btn-block">Reverse</button>
-            </div>
-            <div class="result-container">
-                <label for="input"><span id="result-text-temp">Fahrenheit</span> (&deg;<span id="result-logo-temp">F</span>)</label>
-                <input type="number" class="form-control" id="result" disabled>
-            </div>
-            <div class="formula-note">
-                <h1 id="conversion-title">Cara Conversi Dari Celcius(&deg;C) Ke Fahrenheit(&deg;F)</h1>
-                <p id="conversion-text">
-                    Suhu <span class="superscript">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <span class="superscript">S</span> dalam derajat Celcius (&deg;C) kali 9/5 tambah 32
-                    <br><br>
-                    S<span class="subscript">(&deg;F)</span> = (S<span class="subscript">(&deg;S)</span> x 9/5) + 32
-                    <br><br>
-                    atau
-                    <br><br>
-                    S<span class="subscript">(&deg;F)</span> = (S<span class="subscript">(&deg;S)</span> x 1.8) + 32
-                </p>
-            </div>
+            <div class="card-body"></div>
+            Masukkan Suhu (Celcius)
+            <input type="number" id="input" class="form-control">
+            <button type="button" class="btn btn-succes btn-block" onclick="celciusfahrenheit()">
+                Convert
+            </button>
+            Result
+            <input type="text" id="hasil" class="form-control" readonly>
         </div>
-    </main>
-    <script src="./js/index.js"></script>
+
+        <!-- Block Fahrenheit -->
+        <div class="card-header">
+            <h4>Fahrenheit >> Celcius</h4>
+        </div>
+        <div class="card-body">
+            Masukkan Suhu (Fahrenheit)
+            <input type="number" id="input2" class="form-control">
+            <button type="button" class="btn btn-succes btn-clock" onclick="fahrenheitcelcius()">
+                Convert
+            </button>
+            Result
+            <input type="text" id="hasil2" class="form-control" readonly>
+        </div>
+
+        <!-- Block celcius2 -->
+        <div class="card-header">
+            <h4>Celcius >> Kelvin</h4>
+        </div>
+        <div class="card-body">
+            Masukkan Suhu (celcius)
+            <input type="number" id="input3" class="form-control">
+            <button type="button" class="btn btn-succes btn-clock" onclick="celciuskelvin()">
+                Convert
+            </button>
+            Result
+            <input type="text" id="hasil3" class="form-control" readonly>
+        </div>
+
+        <!-- Block Kelvin -->
+        <div class="card-header">
+            <h4>Kelvin >> Celcius</h4>
+        </div>
+        <div class="card-body">
+            Masukkan Suhu (kelvin)
+            <input type="number" id="input4" class="form-control">
+            <button type="button" class="btn btn-succes btn-clock" onclick="kelvincelcius()">
+                Convert
+            </button>
+            Result
+            <input type="text" id="hasil4" class="form-control" readonly>
+        </div>
+    </div>
+    </div>
+    <br>
+    <h2>Cara konversi dari Celcius (°C) ke Fahrenheit (°F) dan ke Kelvin (K)</h2>
+    <p></p>
+
+    <script src="/js/script.js"></script>
+
 </body>
+
 </html>
